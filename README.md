@@ -1,10 +1,17 @@
 ![Image description](https://i1.faceprep.in/ProGrad/face-logo-resized.png)
 
-# ProGrad Lab | MOVIES - Hall of FAME
+# ProGrad Lab | Hall of Fame
+## Introduction
+
+These days movies all are streamed online in no time. The internet is definitely damaging the movie industry, allowing people to search, download and watch movies without having to pay for them directly. 
+
+A movie theatre has contacted ProGrad to help them. Their idea is to redo their website using Angular. They think using the latest technologies will change the perspective of people and bring in more customers.
+
+The theatre has 5 different rooms, where people watch 5 different movies. Their latest proposal is to show people's favorite movies instead of the latest ones! Your task will be to help them decide which movies to show.
 
 ## Learning Goals
 
-After this lesson, you will be able to:
+After this lab, you will be able to:
 
 - Create an Angular service to share information with all the components in your application.
 - Create Angular routes with parameters.
@@ -25,9 +32,7 @@ $ git commit -m "done"
 $ git push origin master
 ```
 
-Navigate to your repo and create a pull request from your master branch to the original repository's master branch.
-
-In the pull request name, add your Prograd id, name, and last name separated by a dash "-".
+Navigate to your repo and create a pull request from your master branch to the original repository's master branch. In the pull request name, add your ProGrad id, name, and last name separated by a dash "-".
 
 ## Deliverables
 
@@ -53,32 +58,24 @@ To generate the starter code, follow the steps given below
     - run the command following command
     - ```ng serve --open or ng serve -o```
     
-## Introduction
-
-These days, movie theaters are hurting. The internet is damaging the industry, allowing people to search and download movies without paying for them. A cinema has contacted Ironhack to help them change people's views on movies.
-
-Their idea is to redo their website by using Angular2. They think that if they use the latest technologies on their website, people will see them in a hip and cool new way.
-
-The cinema has 5 different rooms, where you will be able to watch 5 movies. The cinema's latest proposal is to show people's favorite movies instead of the latest ones! Your task will be to help them decide which movies to show.
-
 ## Progression 1 | Service Creation
 
 First, we are going to create an Angular Service to contain all of the movies' information. This service is going to have the following:
 
 #### Movies
 
-`movies` will be an Array of objects, that will contain one item per each cinema room. Each object inside the array will have the following information:
+`movies` will be an array of objects, that will contain one item per each movie room. Each object inside the array will have the following information:
 
 - **`id`** (Number) - A unique number used to distinguish between movies.
 - **`title`** (String) - Contains the movie title.
 - **`poster`** (String) - A URL of a poster image for the movie.
 - **`synopsis`** (String) - A brief description about the movie.
-- **`genres`** (Array of Strings) - The genres of a movie, such as "Adventure", "Action", "Romantic Comedy" etc.
+- **`genres`** (Array of Strings) - The genre of a movie, such as "Adventure", "Action", "Romantic Comedy" etc.
 - **`year`** (Number) - Movie's release year.
 - **`director`** (String) - Director of the movie.
-- **`actors`** (Array of Strings) - The actors' names, using one string per each actor.
-- **`hours`** (Array of Strings) - The times the movie is showing. i.e. `Wednesday 19:30, 22:30` would be an element of this array to indicate that you can watch a movie on wednesday at 19:30h and 22:30h.
-- **`room`** (Number) - Room number of the movie. Will be a value between 1 and 5.
+- **`actors`** (Array of Strings) - The actors' names, using one string per actor.
+- **`hours`** (Array of Strings) - Movie timings. i.e. `Wednesday 19:30, 22:30` would be an element of this array to indicate that you can watch a movie on wednesday at 19:30h and 22:30h.
+- **`room`** (Number) - Room number in which the movie is running. This will be a value between 1 and 5.
 
 In the `movies` array you will have to create an element for each movie, and fill the different fields we just defined. **We've provided a list of sample movies in src/sample-movies.js**. Copy the code from this file into your service, you only have to fill in the hours and room numbers.
 
@@ -92,7 +89,7 @@ The movies service will also have two different methods that will be used later 
 #### Tasks
 
 - Create a `Cinema` service.
-- Add a `movies` array of objects to the service. Each object will have the following properties:
+- Add `movies` array of objects to the service. Each object will have the following properties:
   - `id`, number.
   - `title`, string.
   - `poster`, string.
@@ -110,7 +107,7 @@ The movies service will also have two different methods that will be used later 
 
 In the second iteration of this exercise, we will create two different routes to show the details of our cinema.
 
-In the main page of the application, we will show a list with all the movies in the cinema. Once you click on one of the movies, you will see the movie's details.
+In the main page of the application, we will show a list with all the movies in the theatre. Once you click on one of the movies, you will see the movie's details.
 
 We will create the components that will be used to show the information: `MyHomeComponent` and `MyMovieComponent`. Once we have created all the components we need, we have to create two different routes:
 
@@ -135,9 +132,7 @@ We are going to work on the `MyHomeComponent` component we created in the iterat
 
 In the home page, we will show a list of all the movies. In addition, we will add a link to view the details of a movie.
 
-Remember, we're trying to stand out in the cinema world and convert all of the hip millenials. Add some styling to the home page.
-
-
+Remember, we're trying to stand out in the cinema world and attract all the millenials. Add some styling to the home page suitable to our audience.
 
 #### Tasks
 
@@ -150,9 +145,7 @@ Remember, we're trying to stand out in the cinema world and convert all of the h
 
 Once the user visits a movie page, we have to show them the movie's details. Again, we need to use the `Cinema` service to load the information of one movie. On this page, display *all* of the movie's details, and create a back button to return to the home page.
 
-In addition, add a bit of styling to make the details page look nice.
-
-
+In addition, add a bit of styling to make the details page look good.
 
 #### Tasks
 
